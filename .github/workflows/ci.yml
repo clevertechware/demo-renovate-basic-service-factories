@@ -18,4 +18,4 @@ jobs:
           distribution: temurin
           java-version: '21'
           cache: maven
-      - run: ./mvnw -B -ntp verify
+      - run: ./mvnw -B -ntp -Dapi.version=1.44 verify

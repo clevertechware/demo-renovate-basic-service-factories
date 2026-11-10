@@ -24,6 +24,10 @@ anciennes volontairement, pour que Renovate propose leur mise à jour.
 ./mvnw verify
 ```
 
+Avec un Docker Engine 29 ou plus récent, la version de Testcontainers gérée par Spring Boot 3.4.0 (1.20.4) négocie une
+API Docker trop ancienne et ne trouve pas le démon. Le workflow CI passe `-Dapi.version=1.44` pour l'éviter ; la même
+option fonctionne en local : `./mvnw -Dapi.version=1.44 verify`.
+
 ## Lancement
 
 ```bash
